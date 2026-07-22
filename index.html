@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rio Martinez Manullang — Portfolio Fresh Graduate Teknik Informatika. Terbuka untuk magang dan pekerjaan entry-level di Web Development, Data Analytics, dan Admin.">
+  <title>Rio Martinez Manullang | Portfolio Fresh Graduate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Opening Welcome Screen -->
+  <div id="welcome-screen" class="welcome-screen" role="dialog" aria-label="Selamat datang" aria-modal="true">
+    <canvas class="welcome-particles" id="welcome-particles" aria-hidden="true"></canvas>
+    <div class="welcome-glow welcome-glow--1" aria-hidden="true"></div>
+    <div class="welcome-glow welcome-glow--2" aria-hidden="true"></div>
+    <div class="welcome-grid" aria-hidden="true"></div>
+    
+    <!-- Floating Tech Icons -->
+    <div class="welcome-tech-icons" aria-hidden="true">
+      <div class="tech-icon tech-icon--html" data-tech="HTML">HTML</div>
+      <div class="tech-icon tech-icon--css" data-tech="CSS">CSS</div>
+      <div class="tech-icon tech-icon--js" data-tech="JS">JS</div>
+      <div class="tech-icon tech-icon--php" data-tech="PHP">PHP</div>
+      <div class="tech-icon tech-icon--sql" data-tech="SQL">SQL</div>
+      <div class="tech-icon tech-icon--github" data-tech="GitHub">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.665-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      </div>
+      <div class="tech-icon tech-icon--data" data-tech="DATA">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      </div>
+    </div>
+
+    <div class="welcome-content">
+      <div class="welcome-stage welcome-stage--1" data-stage="1">
+        <p class="welcome-typing">
+          <span class="welcome-typing-text" id="welcome-typing-text"></span>
+          <span class="welcome-cursor" aria-hidden="true"></span>
+        </p>
+      </div>
+
+      <div class="welcome-stage welcome-stage--2" data-stage="2">
+        <h1 class="welcome-name">RIO MARTINEZ MANULLANG</h1>
+        <p class="welcome-degree">Fresh Graduate Teknik Informatika</p>
+        <p class="welcome-rotate" id="welcome-rotate" aria-live="polite"></p>
+      </div>
+
+      <div class="welcome-stage welcome-stage--3" data-stage="3">
+        <p class="welcome-final">
+          <span class="welcome-final-line">Ready to Learn.</span>
+          <span class="welcome-final-line">Ready to Build.</span>
+          <span class="welcome-final-line">Ready to Contribute.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a href="#top" class="logo">Rio<span>Martinez</span></a>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#journey">Perjalanan</a></li>
+        <li><a href="#capabilities">Kemampuan</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#certificates">Sertifikat</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero" aria-label="Hero section perkenalan">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge reveal">
+            <span class="hero-badge-dot"></span>
+            Fresh Graduate · Terbuka magang & entry-level
+          </div>
+          <h1 class="hero-title reveal text-activate light-sweep" data-delay="1" data-sweep-delay="400">
+            Rio Martinez Manullang
+          </h1>
+          <p class="hero-role reveal text-activate" data-delay="2">
+            Web Development <span class="hero-divider">·</span> Data Analytics <span class="hero-divider">·</span> Admin<span class="hero-divider">·</span> Testing Analyst
+          </p>
+          <p class="hero-text reveal text-activate" data-delay="3">
+            Saya lulusan Teknik Informatika yang sedang membangun pengalaman di Software Engineering dan Data Analytics. Masih banyak belajar, tapi sudah punya project nyata dari kuliah bootcamp, dan project mandiri — siap mulai dari magang atau posisi entry-level.
+          </p>
+          <div class="hero-actions reveal" data-delay="4">
+            <a href="#projects" class="btn btn-primary">
+              <span>Lihat Proyek Saya</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+            <a href="#" class="btn btn-outline" id="download-cv-btn" aria-label="Download CV Rio Martinez">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Download CV
+            </a>
+          </div>
+          <div class="hero-meta reveal" data-delay="5">
+            <div class="hero-meta-item">
+              <strong>S1</strong>
+              <span>Teknik Informatika</span>
+            </div>
+            <div class="hero-meta-item">
+              <strong>2025</strong>
+              <span>Fresh Graduate</span>
+            </div>
+            <div class="hero-meta-item">
+              <strong>Medan</strong>
+              <span>Siap onsite / remote</span>
+            </div>
+          </div>
+          <!-- Scroll Indicator — 3 animated bars suggesting more content below -->
+          <div class="scroll-indicator" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-right" data-delay="2">
+          <!-- Gradient Orb — large soft radial gradient behind profile for cinematic depth -->
+          <div class="gradient-orb" aria-hidden="true"></div>
+          <div class="profile-frame">
+            <div class="profile-glow" aria-hidden="true"></div>
+            <div class="profile-ring" aria-hidden="true"></div>
+            <div class="profile-card glass">
+              <img
+                src="assets/profile.jpeg"
+                alt="Foto profil Rio Martinez Manullang"
+                class="profile-photo"
+                width="320"
+                height="320"
+                onerror="this.src='assets/profile.svg'; this.onerror=null;"
+              >
+            </div>
+            <div class="profile-float profile-float--1 glass">
+              <span class="profile-float-icon">&lt;/&gt;</span>
+              <div>
+                <strong>Web Development</strong>
+                <span>PHP · HTML · CSS</span>
+              </div>
+            </div>
+            <div class="profile-float profile-float--2 glass">
+              <span class="profile-float-icon">📊</span>
+              <div>
+                <strong>Data Analyst & Admin IT</strong>
+                <span>Excel · SQL· Office</span>
+              </div>
+            </div>
+            <!-- Signature Initial — subtle RM watermark, bottom-left of frame -->
+            <span class="signature-initial" aria-hidden="true">RM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang -->
+    <section class="section container" id="about">
+      <!-- Decorative glow behind the about section -->
+      <div class="about-glow" aria-hidden="true"></div>
+
+      <!-- All story lines in DOM order — one active at a time -->
+      <div class="section-header reveal">
+        <div class="story-line story-line--label">TENTANG SAYA</div>
+        <div class="story-line story-line--heading">Fresh graduate yang</div>
+        <div class="story-line story-line--heading">siap belajar dan <span class="text-gradient">berkontribusi</span></div>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left column: storytelling -->
+        <div class="about-content reveal">
+          <div class="story-line story-line--body">Saya Rio Martinez Manullang, lulusan S1 Teknik Informatika</div>
+          <div class="story-line story-line--body">dari Universitas Katolik Santo Thomas (2025).</div>
+          <div class="story-line story-line--body">Selama kuliah, saya terbiasa mengerjakan project berbasis web</div>
+          <div class="story-line story-line--body">dengan PHP dan MySQL, serta menggunakan Microsoft Office</div>
+          <div class="story-line story-line--body">untuk kebutuhan administrasi dan pelaporan.</div>
+
+          <!-- Key highlights — scannable milestones -->
+          <div class="about-highlights">
+            <div class="about-highlight glass">
+              <div class="about-highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/>
+                </svg>
+              </div>
+              <div class="about-highlight-text">
+                <strong>S1 Teknik Informatika</strong>
+                <span>Universitas Katolik Santo Thomas</span>
+              </div>
+            </div>
+            <div class="about-highlight glass">
+              <div class="about-highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                  <path d="M9 16l2 2 4-4"/>
+                </svg>
+              </div>
+              <div class="about-highlight-text">
+                <strong>Fresh Graduate 2025</strong>
+                <span>IPK 3.63 · Lulus tepat waktu</span>
+              </div>
+            </div>
+            <div class="about-highlight glass">
+              <div class="about-highlight-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="about-highlight-text">
+                <strong>Siap Berkontribusi</strong>
+                <span>Magang / Entry-level position</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-line story-line--body">Saat ini saya sedang memperdalam skill di Web Development</div>
+          <div class="story-line story-line--body">dan Data Analytics, sambil belajar dan ikut beberapa boothcamp</div>
+          <div class="story-line story-line--body">sambil membangun portfolio project dan belajar mandiri.</div>
+          <div class="story-line story-line--body">Saya orang yang teliti, disiplin, dan terbuka untuk feedback —</div>
+          <div class="story-line story-line--body">siap untuk belajar dan memulai langkah pertama dalam karir profesional.</div>
+        </div>
+
+        <!-- Right column: stats with icons -->
+        <div class="about-details reveal" data-delay="2">
+          <div class="about-stat glass">
+            <div class="about-stat-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <div class="about-stat-content">
+              <strong class="counter" data-target="6">0</strong>
+              <span>Project Selesai</span>
+            </div>
+          </div>
+          <div class="about-stat glass">
+            <div class="about-stat-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <div class="about-stat-content">
+              <strong class="counter" data-target="8">0</strong>
+              <span>Sertifikat</span>
+            </div>
+          </div>
+          <div class="about-stat glass">
+            <div class="about-stat-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/>
+              </svg>
+            </div>
+            <div class="about-stat-content">
+              <strong>2025</strong>
+              <span>Lulus S1 Teknik Informatika</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perjalanan Karir -->
+    <section class="section section-alt" id="journey">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <div class="story-line story-line--label">PERJALANAN</div>
+          <div class="story-line story-line--heading">Perjalanan yang</div>
+          <div class="story-line story-line--heading"><span class="text-gradient">Membentuk Saya</span></div>
+          <div class="story-line story-line--body">Setiap pengalaman memberikan pelajaran baru —</div>
+          <div class="story-line story-line--body">mulai dari dunia akademik, organisasi, hingga</div>
+          <div class="story-line story-line--body">membangun proyek nyata sebagai bekal memasuki</div>
+          <div class="story-line story-line--body">dunia profesional.</div>
+        </div>
+
+        <div class="timeline">
+          <!-- Milestone 1: Awal Kuliah -->
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                </svg>
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2021</span>
+                  <span class="timeline-badge timeline-badge--education">Pendidikan</span>
+                </div>
+                <h3>Awal Kuliah Teknik Informatika</h3>
+                <p>Memulai perjalanan S1 Teknik Informatika di Universitas Katolik Santo Thomas — langkah awal membangun fondasi di dunia teknologi dan pemrograman.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Milestone 2: Aktif HIMATIF -->
+          <article class="timeline-item reveal" data-delay="1">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 010 7.75"/>
+                </svg>
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2022-2024</span>
+                  <span class="timeline-badge timeline-badge--organization">Organisasi</span>
+                </div>
+                <h3>Aktif HIMATIF</h3>
+                <p>Bergabung dengan Himpunan Mahasiswa Teknik Informatika — mengasah soft skill, belajar kolaborasi tim, dan berkontribusi dalam kegiatan kemahasiswaan.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Milestone 3: Pemakalah SNISTIK -->
+          <article class="timeline-item reveal" data-delay="2">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 20h9"/>
+                  <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+                </svg>
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2023</span>
+                  <span class="timeline-badge timeline-badge--academic">Akademik</span>
+                </div>
+                <h3>Pemakalah SNISTIK</h3>
+                <p>Menjadi pemakalah di SNISTIK (Seminar Nasional Ilmu Komputer dan Teknologi Informasi) — pengalaman pertama mempresentasikan karya ilmiah di forum nasional.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Milestone 4: Lulus S1 -->
+          <article class="timeline-item reveal" data-delay="3">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/>
+                </svg>
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2025</span>
+                  <span class="timeline-badge timeline-badge--education">Pendidikan</span>
+                </div>
+                <h3>Lulus S1 Teknik Informatika</h3>
+                <p>Menyelesaikan S1 Teknik Informatika di Universitas Katolik Santo Thomas dengan skripsi berupa Sistem Rekomendasi Buku Berbasis Web — kombinasi web development dan data processing.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Milestone 5: Bootcamp & Project Pribadi -->
+          <article class="timeline-item reveal" data-delay="4">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/>
+                </svg>
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-meta">
+                  <span class="timeline-date">2025–2026</span>
+                  <span class="timeline-badge timeline-badge--training">Bootcamp</span>
+                </div>
+                <h3>Bootcamp &amp; Project Pribadi</h3>
+                <p>Mengikuti berbagai bootcamp dan mengembangkan project pribadi berbasis web untuk memperdalam kemampuan Full Stack Development, Data Analytics, serta membangun portfolio profesional yang siap digunakan dalam dunia kerja.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Milestone 6: Siap Memulai Karier -->
+          <article class="timeline-item reveal" data-delay="5">
+            <div class="timeline-marker timeline-marker--active"></div>
+            <div class="timeline-content glass timeline-content--active">
+              <div class="timeline-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-meta">
+                  <span class="timeline-date">Sekarang</span>
+                  <span class="timeline-badge timeline-badge--goal">Tujuan</span>
+                </div>
+                <h3>Siap Memulai Karier Profesional</h3>
+                <p>Terbuka untuk magang, trainee, atau posisi entry-level di Software Engineering, Data Analytics, dan Admin IT — siap menerapkan ilmu dan pengalaman yang telah dipelajari.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kemampuan -->
+    <section class="section section-alt" id="capabilities">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Kemampuan</span>
+          <h2 class="text-activate light-sweep" data-sweep-delay="200">Apa yang bisa <span class="text-gradient text-activate">saya lakukan</span></h2>
+          <p class="section-desc text-activate">Kemampuan yang saya bangun melalui perkuliahan, bootcamp, dan project mandiri — dari kode hingga analisis data dan administrasi.</p>
+        </div>
+
+        <div class="capabilities-grid">
+          <!-- Capability 1: Web Development -->
+          <article class="capability-card glass reveal">
+            <div class="capability-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>Membangun dan mengembangkan website responsif menggunakan teknologi web modern — mulai dari struktur halaman, tampilan antarmuka, hingga interaksi pengguna.</p>
+            <ul class="capability-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>Bootstrap</li>
+            </ul>
+            <div class="capability-projects">
+              <span class="capability-projects-label">Digunakan pada:</span>
+              <div class="capability-projects-list">
+                <span>DataOps Insight</span>
+                <span>BankTest Pro</span>
+                <span>Smart-Excel Assistant</span>
+                <span>Data-Vista</span>
+                <span>Website Portofolio</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Capability 2: Data Analytics -->
+          <article class="capability-card glass reveal" data-delay="1">
+            <div class="capability-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h3>Data Analytics</h3>
+            <p>Mengolah, menganalisis, dan menyajikan data secara visual untuk mendukung pemahaman dan pengambilan keputusan yang lebih baik.</p>
+            <ul class="capability-tags">
+              <li>Microsoft Excel</li>
+              <li>SQL</li>
+              <li>PHPMyAdmin</li>
+            </ul>
+            <div class="capability-projects">
+              <span class="capability-projects-label">Digunakan pada:</span>
+              <div class="capability-projects-list">
+                <span>DataOps Insight</span>
+                <span>BankTest Pro</span>
+                <span>Smart-Excel Assistant</span>
+                <span>Data-Vista</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Capability 3: Database & Backend -->
+          <article class="capability-card glass reveal" data-delay="2">
+            <div class="capability-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+            </div>
+            <h3>Database &amp; Backend</h3>
+            <p>Merancang skema database, menulis query, dan membangun logika backend yang mendukung aplikasi berbasis data dan informasi.</p>
+            <ul class="capability-tags">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>PHPMyAdmin</li>
+            </ul>
+            <div class="capability-projects">
+              <span class="capability-projects-label">Digunakan pada:</span>
+              <div class="capability-projects-list">
+                <span>DataOps Insight</span>
+                <span>BankTest Pro</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Capability 4: Administration & Productivity -->
+          <article class="capability-card glass reveal" data-delay="3">
+            <div class="capability-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+              </svg>
+            </div>
+            <h3>Administrasi &amp; Produktivitas</h3>
+            <p>Menyusun dokumen, laporan, dan presentasi secara profesional — mendukung administrasi perkantoran dan komunikasi di lingkungan kerja.</p>
+            <ul class="capability-tags">
+              <li>Microsoft Word</li>
+              <li>Microsoft PowerPoint</li>
+              <li>Dokumentasi &amp; Laporan</li>
+            </ul>
+            <div class="capability-projects">
+              <span class="capability-projects-label">Digunakan pada:</span>
+              <div class="capability-projects-list">
+                <span>Pelaporan Skripsi</span>
+                <span>Dokumentasi Bootcamp</span>
+                <span>Administrasi Project</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyek -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">Proyek</span>
+          <h2 class="text-activate light-sweep" data-sweep-delay="200">Project <span class="text-gradient text-activate">pembelajaran & portfolio</span></h2>
+          <p class="section-desc text-activate">Project-project ini saya kerjakan selama kuliah, bootcamp, dan latihan mandiri — sebagai bukti proses belajar saya, bukan produk enterprise.</p>
+        </div>
+
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- Sertifikat -->
+    <section class="section container" id="certificates">
+      <div class="certificates-section-head reveal">
+        <div class="section-header section-header--center">
+          <span class="section-label">Sertifikat</span>
+          <h2 class="text-activate light-sweep" data-sweep-delay="200">Hasil <span class="text-gradient text-activate">pembelajaran</span> saya</h2>
+          <p class="section-desc text-activate">Sertifikat dari bootcamp, course online, dan kegiatan akademik — bukti proses belajar saya, bukan sertifikasi enterprise level.</p>
+        </div>
+        <button type="button" class="certificates-view-all" id="cert-view-all-btn" aria-expanded="false">
+          Lihat Semua Sertifikat
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="certificates-grid" id="certificates-grid" aria-live="polite"></div>
+    </section>
+
+    <!-- Kontak -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-wrapper">
+        <div class="section-header reveal">
+          <span class="section-label">Kontak</span>
+          <h2 class="text-activate light-sweep" data-sweep-delay="200">Yuk, <span class="text-gradient text-activate">kenalan dulu</span></h2>
+          <p class="contact-intro">Sedang mencari magang atau pekerjaan pertama? Saya terbuka untuk diskusi, interview, atau sekadar ngobrol soal peluang. Kirim pesan atau hubungi langsung via WhatsApp.</p>
+          <div class="contact-info reveal" data-delay="1">
+            <a href="https://wa.me/6282213843923" class="contact-chip glass" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.75.75 0 00.914.914l4.458-1.495A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.01-1.372l-.36-.214-3.064 1.028 1.028-3.063-.234-.366A9.818 9.818 0 1121.818 12 9.832 9.832 0 0112 21.818z"/></svg>
+              0822-1384-3923
+            </a>
+            <span class="contact-chip glass contact-chip--static">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-4.5 7-10a7 7 0 10-14 0c0 5.5 7 10 7 10z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="11" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+              Medan, Sumatera Utara
+            </span>
+          </div>
+        </div>
+        <form class="contact-form glass reveal" data-delay="2" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Nama</label>
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="email@contoh.com" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Halo Rio, saya ingin diskusi soal peluang magang / kerja..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Rio Martinez Manullang · Fresh Graduate Portfolio</p>
+      <ul class="social-links">
+        <li><a href="#" aria-label="Profil GitHub">GitHub</a></li>
+        <li><a href="#" aria-label="Profil LinkedIn">LinkedIn</a></li>
+        <li><a href="https://wa.me/6282213843923" aria-label="WhatsApp Rio Martinez" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Modal: preview sertifikat -->
+  <div id="cert-viewer-modal" class="cert-viewer-modal" aria-hidden="true">
+    <div class="cert-viewer-backdrop" data-cert-close="viewer"></div>
+    <div class="cert-viewer-panel glass" role="dialog" aria-modal="true" aria-labelledby="cert-viewer-title">
+      <div class="cert-viewer-header">
+        <div class="cert-viewer-header-text">
+          <span class="cert-viewer-issuer" id="cert-viewer-issuer"></span>
+          <h3 id="cert-viewer-title"></h3>
+        </div>
+        <div class="cert-viewer-header-actions">
+          <a href="#" class="cert-viewer-open-drive" id="cert-viewer-open-drive" target="_blank" rel="noopener noreferrer" aria-label="Buka sertifikat di Google Drive">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Open Google Drive
+          </a>
+          <button type="button" class="cert-viewer-close" aria-label="Tutup preview sertifikat" data-cert-close="viewer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="cert-viewer-body">
+        <iframe id="cert-viewer-iframe" title="Preview sertifikat" loading="lazy" allow="autoplay"></iframe>
+        <p class="cert-viewer-placeholder" id="cert-viewer-placeholder" hidden>
+          Link sertifikat belum tersedia.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global mouse glow -->
+  <div class="mouse-glow" aria-hidden="true"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
