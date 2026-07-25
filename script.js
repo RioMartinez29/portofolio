@@ -454,7 +454,7 @@
   });
 
   /* ── CV Download ── */
-  const CV_LINK_PLACEHOLDER = "https://drive.google.com/file/d/1qqDPHRFe1BYtX0CPLl8y-k0iNlPFBcHV/view?usp=drivesdk";
+  const CV_LINK_PLACEHOLDER = "https://drive.google.com/drive/folders/1F_bFFEfdrqWd4n-OFqmRWLRjonDlcuRV";
   const downloadCvBtn = document.getElementById("download-cv-btn");
 
   if (downloadCvBtn) {
